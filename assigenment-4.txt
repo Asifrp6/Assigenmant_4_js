@@ -1,0 +1,89 @@
+Solution No.1:
+//--------------------------start seerToMon function from here--------------------
+function seerToMon(seer){
+// here we check our input is less then or equal 0.
+if (seer <= 0) {
+return "Invalid input";
+}
+return seer / 40;
+}
+//--------------------------end seerToMon function here--------------------
+Solution No.2:
+//--------------------------start totalSales function from here--------------------
+function totalSales(shart,pant,shoes){
+// Shart Price = 100tk
+const shartPrice=100;
+// Pant Price = 200tk
+const pantPrice=200;
+// Shoes Price = 500tk
+const shoesPrice=500;
+// here we check our input item is valid or non valid
+if(shart>-1 && pant>-1 && shoes>-1)
+{
+var TotalShartPrice=shartPrice*shart;
+var TotalPantPrice=pantPrice*pant;
+var TotalShoesPrice=shoesPrice*shoes;
+var totalPrice=TotalShartPrice+TotalPantPrice+TotalShoesPrice;
+return totalPrice;
+}
+else{
+return'Invalid input';
+}
+}
+//--------------------------end totalSales function here--------------------
+Solution No.3:
+//--------------------------start deliveryCost function from here--------------------
+function deliveryCost(TshartNumber){
+// here we crate a condition for check positive value
+if(TshartNumber>-1){
+if(TshartNumber<=100)
+{
+var DeliverChargeType_A=TshartNumber*100;
+return DeliverChargeType_A;
+}
+else if(TshartNumber>100 && TshartNumber<=200)
+{
+var first100Shirt=100*100;
+var othersShart=(TshartNumber-100)*80;
+var DeliverChargeType_B=first100Shirt+othersShart;
+return DeliverChargeType_B;
+}
+else if(TshartNumber>200)
+{
+var fst100Shirt=100*100;
+var second100shart=100*80;
+var lastsharts=(TshartNumber-200)*50;
+var DeliverChargeType_C=fst100Shirt+second100shart+lastsharts;
+return DeliverChargeType_C;
+}
+}
+else
+return 'Invalid Input';
+}
+//--------------------------end deliveryCost function here--------------------
+Solution No.4:
+//--------------------------start perfectFriend function from here-------------------
+function perfectFriend (AllFriendsName){
+var Name='';
+// use for check input valid or not
+for(let n=0;n<AllFriendsName.length;n++){
+if(typeof AllFriendsName[n] != 'string'){
+return 'wrong input';
+}
+}
+// use for find 5 character name
+for(let i=0;i<AllFriendsName.length;i++)
+{
+if(AllFriendsName[i].length==5){
+Name=AllFriendsName[i];
+break;
+}
+}
+if(Name.length==5)
+{
+return Name;
+}
+else
+return 'Here is no name with 5 character';
+}
+//--------------------------end perfectFriend function here--------------------
